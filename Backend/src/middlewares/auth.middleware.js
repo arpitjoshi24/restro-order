@@ -1,0 +1,4 @@
+req.user = {
+  id,
+  role
+}
