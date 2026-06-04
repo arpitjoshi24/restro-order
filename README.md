@@ -96,7 +96,7 @@ Replace the URL with your backend API endpoint.
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone (https://github.com/arpitjoshi24/restro-order.git)
 cd restro-cafe
 ```
 
