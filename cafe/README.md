@@ -1,36 +1,202 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Restro Cafe - QR Based Restaurant Ordering System
 
-## Getting Started
+A modern restaurant management and ordering platform built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **Node.js API integration**.
 
-First, run the development server:
+Customers can scan a QR code placed on their table, browse the menu, place orders, and track order status without waiting for a waiter.
+
+---
+
+##  Features
+
+### Customer Side
+
+- QR Code Based Table Ordering
+- Browse Restaurant Menu
+- Category-wise Food Listing
+- Add Items to Cart
+- Place Orders Instantly
+- Real-Time Order Status Tracking
+- Responsive Mobile-Friendly Interface
+
+### Kitchen Dashboard
+
+- View Incoming Orders
+- Update Order Status
+- Manage Active Orders
+- Track Preparation Workflow
+
+### Admin Dashboard
+
+- Manage Menu Items
+- Manage Categories
+- View Orders
+- Restaurant Analytics
+- Staff Management
+
+---
+
+##  Tech Stack
+
+### Frontend
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Axios
+- Lucide React Icons
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+
+---
+
+##  Project Structure
+
+```bash
+app/
+├── admin/
+├── kitchen/
+├── menu/
+├── orders/
+├── page.tsx
+├── layout.tsx
+
+components/
+├── ui/
+├── shared/
+
+lib/
+├── axios.ts
+
+public/
+├── assets/
+```
+
+---
+
+##  Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+```
+
+Replace the URL with your backend API endpoint.
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+cd restro-cafe
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment Variables
+
+Create:
+
+```bash
+.env.local
+```
+
+and add:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+```
+
+### Start Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+##  Backend Requirements
 
-To learn more about Next.js, take a look at the following resources:
+Ensure the backend server is running before starting the frontend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example Backend URL:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+http://localhost:5000/api
+```
 
-## Deploy on Vercel
+Required APIs:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Menu
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```http
+GET /menu
+```
+
+### Orders
+
+```http
+POST /orders
+GET /orders
+```
+
+### Kitchen
+
+```http
+GET /kitchen/orders
+PATCH /kitchen/orders/:id
+```
+
+---
+
+##  QR Ordering Flow
+
+1. Customer scans table QR code.
+2. Menu opens automatically.
+3. Customer adds items to cart.
+4. Order is submitted.
+5. Kitchen receives order instantly.
+6. Order status is updated.
+7. Customer receives order.
+
+---
+
+##  UI Features
+
+- Modern Restaurant Landing Page
+- Mobile Responsive Design
+- Dashboard Analytics
+- Fast Navigation
+- Optimized Performance
+
+---
+
+##  License
+
+This project is licensed under the MIT License.
+
+---
+
+##  Author
+
+**Arpit Joshi**
+

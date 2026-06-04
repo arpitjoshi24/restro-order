@@ -42,36 +42,7 @@ useEffect(() => {
 }, []);
   return (
     <div className="min-h-screen bg-[#F8F3EB]">
-      {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#EFE3D1]">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-[#C46A2D] flex items-center justify-center">
-              <UtensilsCrossed className="text-white" />
-            </div>
-
-            <div>
-              <h1 className="text-xl font-bold text-[#2C1810]">
-                Restro
-              </h1>
-
-              <p className="text-xs text-gray-500">
-                Restaurant & Bistro
-              </p>
-            </div>
-          </div>
-
-          <div className="hidden md:flex items-center gap-8 text-[#2C1810] font-medium">
-            <a href="#about">About</a>
-            <a href="#specials">Specials</a>
-            <a href="/menu">Menu</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-            
-          </div>
-        </div>
-      </nav>
-
+      
       {/* HERO */}
      <section className="relative min-h-screen overflow-hidden">
   {/* Background Image */}
@@ -194,7 +165,7 @@ useEffect(() => {
       >
         <div className="flex justify-between items-center mb-10">
           <h2 className="text-5xl font-bold text-[#2C1810]">
-            Chef's Specials
+            Restro Specials
           </h2>
 
           <Link
@@ -214,18 +185,12 @@ useEffect(() => {
         key={item.id}
         className="bg-white rounded-[32px] overflow-hidden shadow-lg"
       >
-        <div className="relative h-64">
-          <Image
-            src={
-              item.image ||
-              "/margherita.png"
-            }
-            alt={item.name}
-            fill
-            className="object-cover"
-          />
-        </div>
-
+        <div className="h-48 bg-[#FFF6EB] flex items-center justify-center">
+  <UtensilsCrossed
+    size={64}
+    className="text-[#C46A2D]"
+  />
+</div>
         <div className="p-6">
           <h3 className="text-2xl font-bold text-[#2C1810]">
             {item.name}
@@ -245,33 +210,6 @@ useEffect(() => {
 </div>
       </section>
 
-      {/* GALLERY */}
-      <section
-        id="gallery"
-        className="bg-white py-24"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center text-[#2C1810] mb-14">
-            Restaurant Gallery
-          </h2>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((item) => (
-              <div
-                key={item}
-                className="relative h-72 rounded-[28px] overflow-hidden"
-              >
-                <Image
-                  src={`/gallery-${item}.jpg`}
-                  alt="Gallery"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CONTACT */}
       <section
